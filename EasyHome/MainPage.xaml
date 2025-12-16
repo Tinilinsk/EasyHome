@@ -2,6 +2,150 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasyHome.MainPage">
+    <Grid>
+            <ScrollView Margin="0,40,0,80">
+                <VerticalStackLayout Padding="20" Spacing="20">
 
+                    <Grid ColumnDefinitions="Auto, *, Auto">
+                        <Border StrokeShape="RoundRectangle 25" HeightRequest="50" WidthRequest="50" StrokeThickness="0">
+                            <Image Source="dotnet_bot.png" Aspect="AspectFill" BackgroundColor="Gray"/>
+                        </Border>
 
-</ContentPage>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Margin="15,0,0,0">
+                            <Label Text="Welcome." TextColor="#8E8E93" FontSize="14"/>
+                            <Label Text="Anonymous" TextColor="White" FontSize="18" FontAttributes="Bold"/>
+                        </VerticalStackLayout>
+
+                        <HorizontalStackLayout Grid.Column="2" Spacing="0" VerticalOptions="Center">
+                            <Button Text="🔔" 
+                                BackgroundColor="Transparent" 
+                                BorderColor="Transparent"
+                                TextColor="White" 
+                                FontSize="22"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"/>
+
+                            <Button Text="🤍" 
+                                BackgroundColor="Transparent" 
+                                BorderColor="Transparent"
+                                TextColor="White" 
+                                FontSize="22"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+
+                    <Border StrokeShape="RoundRectangle 15" BackgroundColor="#23262F" HeightRequest="50" StrokeThickness="0" Padding="15,0">
+                        <Grid ColumnDefinitions="Auto, *, Auto">
+                            <Label Text="🔍" TextColor="#8E8E93" VerticalOptions="Center"/>
+                            <Entry Grid.Column="1" Placeholder="Search" PlaceholderColor="#8E8E93" TextColor="White" VerticalOptions="Center" Margin="10,0"/>
+                            <Label Grid.Column="2" Text="⚙️" TextColor="#8E8E93" VerticalOptions="Center"/>
+                        </Grid>
+                    </Border>
+
+                    <Grid ColumnDefinitions="60, *">
+                        <Border StrokeShape="RoundRectangle 30" HeightRequest="60" WidthRequest="60" BackgroundColor="#23262F" StrokeThickness="0">
+                            <Image Source="dotnet_bot.png" Aspect="AspectFill" Opacity="0.7"/>
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="15,0,0,0">
+                            <Label Text="Test category" TextColor="#DDDDDD" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="[1]0" TextColor="#666666" FontSize="14"/>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="60, *">
+                        <Border StrokeShape="RoundRectangle 30" HeightRequest="60" WidthRequest="60" BackgroundColor="#23262F" StrokeThickness="0">
+                            <Image Source="dotnet_bot.png" Aspect="AspectFill" Opacity="0.7"/>
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="15,0,0,0">
+                            <Label Text="Test category" TextColor="#DDDDDD" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="[1]0" TextColor="#666666" FontSize="14"/>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="60, *">
+                        <Border StrokeShape="RoundRectangle 30" HeightRequest="60" WidthRequest="60" BackgroundColor="#23262F" StrokeThickness="0">
+                            <Image Source="dotnet_bot.png" Aspect="AspectFill" Opacity="0.7"/>
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="15,0,0,0">
+                            <Label Text="Test category" TextColor="#DDDDDD" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="[1]0" TextColor="#666666" FontSize="14"/>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="60, *">
+                        <Border StrokeShape="RoundRectangle 30" HeightRequest="60" WidthRequest="60" BackgroundColor="#23262F" StrokeThickness="0">
+                            <Image Source="dotnet_bot.png" Aspect="AspectFill" Opacity="0.7"/>
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="15,0,0,0">
+                            <Label Text="Test category" TextColor="#DDDDDD" FontSize="16" FontAttributes="Bold"/>
+                            <Label Text="[1]0" TextColor="#666666" FontSize="14"/>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+            <Button Text="💬"
+                FontSize="24"
+                TextColor="White"
+                BackgroundColor="#5B4DFF"
+                HeightRequest="60"
+                WidthRequest="60"
+                CornerRadius="30"
+                Padding="0"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Margin="20,20,20,90"/>
+
+            <Grid VerticalOptions="End" BackgroundColor="#15171B" HeightRequest="70" ColumnDefinitions="*, *, *, *">
+
+                <Button Grid.Column="0"
+                    Text="🏠&#10;Home"
+                    TextColor="White"
+                    FontSize="12"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    LineBreakMode="WordWrap"
+                    Padding="0"
+                    HeightRequest="70"
+                    VerticalOptions="Center"/>
+
+                <Button Grid.Column="1"
+                    Text="🛒&#10;Cart"
+                    TextColor="Gray"
+                    FontSize="12"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    LineBreakMode="WordWrap"
+                    Padding="0"
+                    HeightRequest="70"
+                    VerticalOptions="Center"/>
+
+                <Button Grid.Column="2"
+                    Text="📄&#10;Orders"
+                    TextColor="Gray"
+                    FontSize="12"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    LineBreakMode="WordWrap"
+                    Padding="0"
+                    HeightRequest="70"
+                    VerticalOptions="Center"/>
+
+                <Button Grid.Column="3"
+                    Text="👤&#10;Profile"
+                    TextColor="Gray"
+                    FontSize="12"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    LineBreakMode="WordWrap"
+                    Padding="0"
+                    HeightRequest="70"
+                    VerticalOptions="Center"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage>
