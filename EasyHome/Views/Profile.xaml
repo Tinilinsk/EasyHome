@@ -1,358 +1,172 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EasyHome.Views.Profile"
-             BackgroundColor="Black">
-    <Grid>
-        <ScrollView>
-            <VerticalStackLayout Padding="20" Spacing="20">
-                <Label Text="My Cart"
-                       FontSize="32"
-                       FontAttributes="Bold"
-                       TextColor="White"
-                       HorizontalOptions="Center" />
+             x:Class="EasyHome.Views.Profiles"
+             Title="Profile"
+             BackgroundColor="#15171B"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
 
-                <Border BackgroundColor="#1C1C1E"
-                        StrokeThickness="0"
-                        Padding="15">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="15"/>
-                    </Border.StrokeShape>
+    <Grid BackgroundColor="#15171B">
 
-                    <Grid ColumnDefinitions="Auto, *, Auto" ColumnSpacing="15">
-                        <Border Grid.Column="0"
-                                HeightRequest="70"
-                                WidthRequest="70"
-                                StrokeShape="RoundRectangle 35"
-                                VerticalOptions="Center">
-                            <Image Source="dotnet_bot.png" 
-                                   Aspect="AspectFill"
-                                   HeightRequest="70"
-                                   WidthRequest="70"/>
-                        </Border>
+        <ScrollView Margin="0,0,0,80" BackgroundColor="#15171B">
+            <VerticalStackLayout Spacing="0" BackgroundColor="#15171B">
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="1" VerticalOptions="Center">
-                            <Label Text="Name" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"/>
-                            <HorizontalStackLayout Spacing="8">
-                                <BoxView Color="Black" 
-                                         HeightRequest="15" 
-                                         WidthRequest="15" 
-                                         CornerRadius="8" 
-                                         VerticalOptions="Center"/>
-                                <Label Text="Color" TextColor="Gray" FontSize="14"/>
-                            </HorizontalStackLayout>
-                            <Label Text="67,41 PLN" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"
-                                   Margin="0,5,0,0"/>
-                        </VerticalStackLayout>
+                <VerticalStackLayout Padding="0,40,0,30" Spacing="10" BackgroundColor="#15171B">
+                    <Border StrokeShape="RoundRectangle 50"
+                            HeightRequest="100"
+                            WidthRequest="100"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#CCCCCC">
+                        <Image Source="dotnet_bot.png" Aspect="AspectFill"/>
+                    </Border>
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center">
+                    <Label Text="Anonimous" 
+                           TextColor="White" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
 
-                            <Button Text="🗑️" 
-                                    TextColor="#FF453A" 
-                                    FontSize="20" 
-                                    BackgroundColor="Transparent"
-                                    BorderColor="Transparent"
-                                    Padding="0"
-                                    HeightRequest="30"
-                                    HorizontalOptions="End"/>
+                    <Label Text="+1 --- --- ----" 
+                           TextColor="#8E8E93" 
+                           FontSize="14" 
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
 
-                            <Label Text="size" 
-                                   TextColor="Gray" 
-                                   FontSize="12" 
-                                   HorizontalOptions="End"/>
 
-                            <Border BackgroundColor="#2C2C2E" 
-                                    StrokeThickness="0" 
-                                    Padding="5"
-                                    Margin="0,5,0,0">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="20"/>
-                                </Border.StrokeShape>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="👤" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Edit Profile" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                                <HorizontalStackLayout Spacing="0" VerticalOptions="Center">
-                                    <Button Text="-" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnEditProfileClicked"/>
+                </Grid>
 
-                                    <Label Text="1" 
-                                           TextColor="White" 
-                                           FontSize="18"
-                                           VerticalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           WidthRequest="20"/>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="💬" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Customer Chat Support" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                                    <Button Text="+" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
-                        </VerticalStackLayout>
-                    </Grid>
-                </Border>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnChatClicked"/>
+                </Grid>
 
-                <Border BackgroundColor="#1C1C1E"
-                        StrokeThickness="0"
-                        Padding="15">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="15"/>
-                    </Border.StrokeShape>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="📍" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Addresses" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                    <Grid ColumnDefinitions="Auto, *, Auto" ColumnSpacing="15">
-                        <Border Grid.Column="0"
-                                HeightRequest="70"
-                                WidthRequest="70"
-                                StrokeShape="RoundRectangle 35"
-                                VerticalOptions="Center">
-                            <Image Source="dotnet_bot.png" 
-                                   Aspect="AspectFill"
-                                   HeightRequest="70"
-                                   WidthRequest="70"/>
-                        </Border>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnAddressesClicked"/>
+                </Grid>
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="1" VerticalOptions="Center">
-                            <Label Text="Name" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"/>
-                            <HorizontalStackLayout Spacing="8">
-                                <BoxView Color="Black" 
-                                         HeightRequest="15" 
-                                         WidthRequest="15" 
-                                         CornerRadius="8" 
-                                         VerticalOptions="Center"/>
-                                <Label Text="Color" TextColor="Gray" FontSize="14"/>
-                            </HorizontalStackLayout>
-                            <Label Text="67,41 PLN" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"
-                                   Margin="0,5,0,0"/>
-                        </VerticalStackLayout>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="🔔" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Notification Setting" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center">
-                            <Button Text="🗑️" 
-                                    TextColor="#FF453A" 
-                                    FontSize="20" 
-                                    BackgroundColor="Transparent"
-                                    BorderColor="Transparent"
-                                    Padding="0"
-                                    HeightRequest="30"
-                                    HorizontalOptions="End"/>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnNotificationsClicked"/>
+                </Grid>
 
-                            <Label Text="size" 
-                                   TextColor="Gray" 
-                                   FontSize="12" 
-                                   HorizontalOptions="End"/>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="👁️" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Dark Mode" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                            <Border BackgroundColor="#2C2C2E" 
-                                    StrokeThickness="0" 
-                                    Padding="5"
-                                    Margin="0,5,0,0">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="20"/>
-                                </Border.StrokeShape>
-                                <HorizontalStackLayout Spacing="0" VerticalOptions="Center">
-                                    <Button Text="-" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
-                                    <Label Text="1" 
-                                           TextColor="White" 
-                                           FontSize="18"
-                                           VerticalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           WidthRequest="20"/>
-                                    <Button Text="+" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
-                        </VerticalStackLayout>
-                    </Grid>
-                </Border>
+                    <Switch Grid.Column="2" IsToggled="True" OnColor="#3E61F6" ThumbColor="White"/>
+                </Grid>
 
-                <Border BackgroundColor="#1C1C1E"
-                        StrokeThickness="0"
-                        Padding="15">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="15"/>
-                    </Border.StrokeShape>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="🔒" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Privacy Policy" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                    <Grid ColumnDefinitions="Auto, *, Auto" ColumnSpacing="15">
-                        <Border Grid.Column="0"
-                                HeightRequest="70"
-                                WidthRequest="70"
-                                StrokeShape="RoundRectangle 35"
-                                VerticalOptions="Center">
-                            <Image Source="dotnet_bot.png" 
-                                   Aspect="AspectFill"
-                                   HeightRequest="70"
-                                   WidthRequest="70"/>
-                        </Border>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnPrivacyClicked"/>
+                </Grid>
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="1" VerticalOptions="Center">
-                            <Label Text="Name" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"/>
-                            <HorizontalStackLayout Spacing="8">
-                                <BoxView Color="Black" 
-                                         HeightRequest="15" 
-                                         WidthRequest="15" 
-                                         CornerRadius="8" 
-                                         VerticalOptions="Center"/>
-                                <Label Text="Color" TextColor="Gray" FontSize="14"/>
-                            </HorizontalStackLayout>
-                            <Label Text="67,41 PLN" 
-                                   TextColor="White" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold"
-                                   Margin="0,5,0,0"/>
-                        </VerticalStackLayout>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
+                    <Label Text="👥" TextColor="White" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Invite Friends" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
-                        <VerticalStackLayout Spacing="5" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center">
-                            <Button Text="🗑️" 
-                                    TextColor="#FF453A" 
-                                    FontSize="20" 
-                                    BackgroundColor="Transparent"
-                                    BorderColor="Transparent"
-                                    Padding="0"
-                                    HeightRequest="30"
-                                    HorizontalOptions="End"/>
+                    <Button Grid.Column="2" 
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnInviteClicked"/>
+                </Grid>
 
-                            <Label Text="size" 
-                                   TextColor="Gray" 
-                                   FontSize="12" 
-                                   HorizontalOptions="End"/>
+                <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0" Margin="0,10,0,0">
+                    <Label Text="🚪" TextColor="#FF453A" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
 
-                            <Border BackgroundColor="#2C2C2E" 
-                                    StrokeThickness="0" 
-                                    Padding="5"
-                                    Margin="0,5,0,0">
-                                <Border.StrokeShape>
-                                    <RoundRectangle CornerRadius="20"/>
-                                </Border.StrokeShape>
-                                <HorizontalStackLayout Spacing="0" VerticalOptions="Center">
-                                    <Button Text="-" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
-                                    <Label Text="1" 
-                                           TextColor="White" 
-                                           FontSize="18"
-                                           VerticalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           WidthRequest="20"/>
-                                    <Button Text="+" 
-                                            TextColor="White" 
-                                            FontSize="18" 
-                                            FontAttributes="Bold"
-                                            BackgroundColor="Transparent"
-                                            BorderColor="Transparent"
-                                            Padding="0"
-                                            WidthRequest="30"
-                                            HeightRequest="30"
-                                            VerticalOptions="Center"/>
-                                </HorizontalStackLayout>
-                            </Border>
-                        </VerticalStackLayout>
-                    </Grid>
-                </Border>
+                    <Button Grid.Column="1" 
+                                Text="Logout" 
+                                TextColor="#FF453A" 
+                                FontSize="16" 
+                                FontAttributes="Bold"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                HorizontalOptions="Start"
+                                Padding="0"
+                                Clicked="OnLogoutClicked"/>
+                </Grid>
 
             </VerticalStackLayout>
         </ScrollView>
 
-        <Button Text="Checkout [1]"
-                FontSize="20"
-                TextColor="Black"
-                BackgroundColor="#7cffef"
-                HeightRequest="60"
-                CornerRadius="10"
-                Padding="10"
-                HorizontalOptions="End"
-                VerticalOptions="End"
-                Margin="20,20,20,90"/>
-
         <Grid VerticalOptions="End" BackgroundColor="#15171B" HeightRequest="70" ColumnDefinitions="*, *, *, *">
-            <Button Grid.Column="0"
-                    Text="🏠&#10;Home"
-                    TextColor="Gray"
-                    FontSize="12"
-                    BackgroundColor="Transparent"
-                    BorderColor="Transparent"
-                    LineBreakMode="WordWrap"
-                    Padding="0"
-                    HeightRequest="70"
-                    VerticalOptions="Center"/>
-            <Button Grid.Column="1"
-                    Text="🛒&#10;Cart"
-                    TextColor="White"
-                    FontSize="12"
-                    BackgroundColor="Transparent"
-                    BorderColor="Transparent"
-                    LineBreakMode="WordWrap"
-                    Padding="0"
-                    HeightRequest="70"
-                    VerticalOptions="Center"/>
-            <Button Grid.Column="2"
-                    Text="📄&#10;Orders"
-                    TextColor="Gray"
-                    FontSize="12"
-                    BackgroundColor="Transparent"
-                    BorderColor="Transparent"
-                    LineBreakMode="WordWrap"
-                    Padding="0"
-                    HeightRequest="70"
-                    VerticalOptions="Center"/>
-            <Button Grid.Column="3"
-                    Text="👤&#10;Profile"
-                    TextColor="Gray"
-                    FontSize="12"
-                    BackgroundColor="Transparent"
-                    BorderColor="Transparent"
-                    LineBreakMode="WordWrap"
-                    Padding="0"
-                    HeightRequest="70"
-                    VerticalOptions="Center"/>
+            <Button Grid.Column="0" Text="🏠&#10;Home" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70" VerticalOptions="Center"/>
+            <Button Grid.Column="1" Text="🛒&#10;Cart" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70" VerticalOptions="Center"/>
+            <Button Grid.Column="2" Text="📄&#10;Orders" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70" VerticalOptions="Center"/>
+            <Button Grid.Column="3" Text="👤&#10;Profile" TextColor="White" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70" VerticalOptions="Center"/>
         </Grid>
+
     </Grid>
 </ContentPage>
