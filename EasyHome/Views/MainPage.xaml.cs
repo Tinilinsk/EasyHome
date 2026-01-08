@@ -1,4 +1,4 @@
-﻿namespace EasyHome
+﻿namespace EasyHome.Views
 {
     public partial class MainPage : ContentPage
     {
