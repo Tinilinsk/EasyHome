@@ -2,11 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EasyHome.Views.AddProduct"
-             Title="AddProduct">
+             Title="">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Add Product Page Content Goes Here"
+            FontSize="Header"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"/>
+        <Label 
+            Text="Product Name:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"/>
+        <Entry 
+            Placeholder="Enter product name" 
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+            Text="Product Description:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="10"/>
+        <Entry 
+            Placeholder="Enter product description" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Price:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"/>
+        <Entry
+            Placeholder="Enter price" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="In stock:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"/>
+        <Switch
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button 
+            Text="Add Product" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="20"/>
     </VerticalStackLayout>
 </ContentPage>
