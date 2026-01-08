@@ -14,23 +14,23 @@
 
                 <VerticalStackLayout Padding="0,40,0,30" Spacing="10" BackgroundColor="#15171B">
                     <Border StrokeShape="RoundRectangle 50"
-                        HeightRequest="100"
-                        WidthRequest="100"
-                        HorizontalOptions="Center"
-                        BackgroundColor="#CCCCCC">
+                            HeightRequest="100"
+                            WidthRequest="100"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#CCCCCC">
                         <Image Source="dotnet_bot.png" Aspect="AspectFill"/>
                     </Border>
 
                     <Label Text="Anonimous" 
-                       TextColor="White" 
-                       FontSize="20" 
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"/>
+                           TextColor="White" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
 
                     <Label Text="+1 --- --- ----" 
-                       TextColor="#8E8E93" 
-                       FontSize="14" 
-                       HorizontalOptions="Center"/>
+                           TextColor="#8E8E93" 
+                           FontSize="14" 
+                           HorizontalOptions="Center"/>
                 </VerticalStackLayout>
 
 
@@ -39,16 +39,16 @@
                     <Label Grid.Column="1" Text="Edit Profile" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnEditProfileClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnEditProfileClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
@@ -56,16 +56,16 @@
                     <Label Grid.Column="1" Text="Customer Chat Support" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnChatClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnChatClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
@@ -73,16 +73,16 @@
                     <Label Grid.Column="1" Text="Addresses" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnAddressesClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnAddressesClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
@@ -90,16 +90,16 @@
                     <Label Grid.Column="1" Text="Notification Setting" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnNotificationsClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnNotificationsClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
@@ -114,16 +114,16 @@
                     <Label Grid.Column="1" Text="Privacy Policy" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnPrivacyClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnPrivacyClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0">
@@ -131,31 +131,31 @@
                     <Label Grid.Column="1" Text="Invite Friends" TextColor="White" FontSize="16" VerticalOptions="Center" FontAttributes="Bold" Margin="10,0,0,0"/>
 
                     <Button Grid.Column="2" 
-                            Text="›" 
-                            TextColor="#8E8E93" 
-                            FontSize="24" 
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Padding="0"
-                            WidthRequest="40"
-                            HeightRequest="40"
-                            VerticalOptions="Center"
-                            Clicked="OnInviteClicked"/>
+                                Text="›" 
+                                TextColor="#8E8E93" 
+                                FontSize="24" 
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                Padding="0"
+                                WidthRequest="40"
+                                HeightRequest="40"
+                                VerticalOptions="Center"
+                                Clicked="OnInviteClicked"/>
                 </Grid>
 
                 <Grid ColumnDefinitions="50, *, Auto" HeightRequest="60" Padding="20,0" Margin="0,10,0,0">
                     <Label Text="🚪" TextColor="#FF453A" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"/>
 
                     <Button Grid.Column="1" 
-                            Text="Logout" 
-                            TextColor="#FF453A" 
-                            FontSize="16" 
-                            FontAttributes="Bold"
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            HorizontalOptions="Start"
-                            Padding="0"
-                            Clicked="OnLogoutClicked"/>
+                                Text="Logout" 
+                                TextColor="#FF453A" 
+                                FontSize="16" 
+                                FontAttributes="Bold"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                HorizontalOptions="Start"
+                                Padding="0"
+                                Clicked="OnLogoutClicked"/>
                 </Grid>
 
             </VerticalStackLayout>
