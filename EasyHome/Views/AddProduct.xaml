@@ -18,7 +18,8 @@
         <Entry 
             Placeholder="Enter product name" 
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            x:Name="InputName"/>
         <Label 
             Text="Product Description:" 
             VerticalOptions="Center" 
@@ -27,7 +28,8 @@
         <Entry 
             Placeholder="Enter product description" 
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            x:Name="InputDescription"/>
         <Label 
             Text="Price:" 
             VerticalOptions="Center" 
@@ -36,7 +38,8 @@
         <Entry
             Placeholder="Enter price" 
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            x:Name="InputPrice"/>
         <Label 
             Text="In stock:" 
             VerticalOptions="Center" 
@@ -44,11 +47,16 @@
             Margin="10"/>
         <Switch
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            x:Name="InputInStock"/>
         <Button 
             Text="Add Product" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            Margin="20"/>
+            Margin="20"
+            Clicked="SubmitNewProduct"/>
+        <Label
+            Text=""
+            x:Name="Result"></Label>
     </VerticalStackLayout>
 </ContentPage>
