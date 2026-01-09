@@ -12,42 +12,45 @@
                 <ScrollView Grid.Row="0">
                     <VerticalStackLayout Spacing="0" Padding="0,0,0,20">
 
-                        <Grid HeightRequest="300">
-                            <Image Source="yellow_sofa.png"
-                               Aspect="AspectFill"
-                               HorizontalOptions="Fill"
-                               VerticalOptions="Fill"/>
+                    <Grid HeightRequest="300">
+                        <Image x:Name="MainProductImage"
+                           Source="chair_grey.png"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Fill"/> 
 
-                            <Button Text="←"
-                                TextColor="White"
-                                FontSize="30"
-                                BackgroundColor="Transparent"
-                                HorizontalOptions="Start"
-                                VerticalOptions="Start"
-                                Margin="10,10,0,0"
-                                HeightRequest="50"
-                                WidthRequest="50"/>
+                        <Button Text="←"
+                            TextColor="White"
+                            FontSize="30"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Margin="10,10,0,0"
+                            HeightRequest="50"
+                            WidthRequest="50"
+                            Clicked="OnBackClicked"/>
+                        <Button Text="‹"
+                            TextColor="White"
+                            FontSize="60"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            Margin="10,0,0,0"
+                            Padding="0"
+                            Clicked="OnPreviousImageClicked"/>
 
-                            <Button Text="‹"
-                                TextColor="White"
-                                FontSize="60"
-                                BackgroundColor="Transparent"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Start"
-                                Margin="10,0,0,0"
-                                Padding="0"/>
+                        <Button Text="›"
+                            TextColor="White"
+                            FontSize="60"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End"
+                            Margin="0,0,10,0"
+                            Padding="0"
+                            Clicked="OnNextImageClicked"/>
+                    </Grid>
 
-                            <Button Text="›"
-                                TextColor="White"
-                                FontSize="60"
-                                BackgroundColor="Transparent"
-                                VerticalOptions="Center"
-                                HorizontalOptions="End"
-                                Margin="0,0,10,0"
-                                Padding="0"/>
-                        </Grid>
-
-                        <Grid ColumnDefinitions="*, *, *" ColumnSpacing="10" Padding="20,15,20,0">
+                    <Grid ColumnDefinitions="*, *, *" ColumnSpacing="10" Padding="20,15,20,0">
                             <Border Grid.Column="0" StrokeThickness="0" HeightRequest="80">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="10"/>
