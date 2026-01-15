@@ -41,6 +41,16 @@
             HorizontalOptions="Center"
             x:Name="InputPrice"/>
         <Label 
+            Text="Category:" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"/>
+        <Entry
+            Placeholder="Enter category" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            x:Name="InputCategory"/>
+        <Label 
             Text="In stock:" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"
