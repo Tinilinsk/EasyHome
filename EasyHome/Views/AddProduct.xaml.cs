@@ -30,6 +30,13 @@ public partial class AddProduct : ContentPage
             return;
         }
 
+        if (string.IsNullOrWhiteSpace(InputCategory.Text))
+        {
+            await DisplayAlert("Error", "Please enter product category", "OK");
+            InputPrice.Focus();
+            return;
+        }
+
         if (!decimal.TryParse(InputPrice.Text.Replace('.', ','), out decimal price) || price < 0)
         {
             await DisplayAlert("Error", "Please enter a valid positive number for price", "OK");
@@ -39,8 +46,9 @@ public partial class AddProduct : ContentPage
         }
         string name = InputName.Text;
 		string description = InputDescription.Text;
+        string category = InputCategory.Text;
 		bool inStock = InputInStock.IsToggled;
 
-		Result.Text = $"Product Added:\nName: {name}\nDescription: {description}\nPrice: {price:C}\nIn Stock: {inStock}";
+		Result.Text = $"Product Added:\nName: {name}\nDescription: {description}\nCategory: {category}\nPrice: {price:C}\nIn Stock: {inStock}";
     }
 }

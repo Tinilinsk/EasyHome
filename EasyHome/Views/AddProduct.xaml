@@ -67,6 +67,7 @@
             Clicked="SubmitNewProduct"/>
         <Label
             Text=""
+            Margin="10"
             x:Name="Result"></Label>
     </VerticalStackLayout>
 </ContentPage>
