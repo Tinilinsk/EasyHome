@@ -2,7 +2,7 @@ namespace EasyHome.Views;
 
 public partial class AddProduct : ContentPage
 {
-    private string _imagePath;
+    private string _imagePath = string.Empty;
 
 
     public AddProduct()
@@ -14,35 +14,35 @@ public partial class AddProduct : ContentPage
 	{
         if (string.IsNullOrWhiteSpace(InputName.Text))
         {
-            await DisplayAlert("Error", "Please enter product name", "OK");
+            await DisplayAlertAsync("Error", "Please enter product name", "OK");
             InputName.Focus();
             return;
         }
 
         if (string.IsNullOrWhiteSpace(InputDescription.Text))
         {
-            await DisplayAlert("Error", "Please enter category name", "OK");
+            await DisplayAlertAsync("Error", "Please enter category name", "OK");
             InputDescription.Focus();
             return;
         }
 
         if (string.IsNullOrWhiteSpace(InputPrice.Text))
         {
-            await DisplayAlert("Error", "Please enter product price", "OK");
+            await DisplayAlertAsync("Error", "Please enter product price", "OK");
             InputPrice.Focus();
             return;
         }
 
         if (string.IsNullOrWhiteSpace(InputCategory.Text))
         {
-            await DisplayAlert("Error", "Please enter product category", "OK");
+            await DisplayAlertAsync("Error", "Please enter product category", "OK");
             InputPrice.Focus();
             return;
         }
 
         if (!decimal.TryParse(InputPrice.Text.Replace('.', ','), out decimal price) || price < 0)
         {
-            await DisplayAlert("Error", "Please enter a valid positive number for price", "OK");
+            await DisplayAlertAsync("Error", "Please enter a valid positive number for price", "OK");
             InputPrice.Text = "";
             InputPrice.Focus();
             return;
