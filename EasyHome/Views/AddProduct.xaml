@@ -59,6 +59,11 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             x:Name="InputInStock"/>
+        <Button
+            VerticalOptions="Center" 
+            Margin="10"
+            Text="Choose photo"
+            Clicked="OnPickPhotoClicked" />
         <Button 
             Text="Add Product" 
             VerticalOptions="Center" 

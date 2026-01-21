@@ -51,4 +51,9 @@ public partial class AddProduct : ContentPage
 
 		Result.Text = $"Product Added:\nName: {name}\nDescription: {description}\nCategory: {category}\nPrice: {price:C}\nIn Stock: {inStock}";
     }
+
+    private void OnPickPhotoClicked(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
+    }
 }
