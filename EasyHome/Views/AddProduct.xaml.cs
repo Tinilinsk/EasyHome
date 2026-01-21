@@ -2,7 +2,10 @@ namespace EasyHome.Views;
 
 public partial class AddProduct : ContentPage
 {
-	public AddProduct()
+    private string _imagePath;
+
+
+    public AddProduct()
 	{
 		InitializeComponent();
 	}
@@ -52,8 +55,29 @@ public partial class AddProduct : ContentPage
 		Result.Text = $"Product Added:\nName: {name}\nDescription: {description}\nCategory: {category}\nPrice: {price:C}\nIn Stock: {inStock}";
     }
 
-    private void OnPickPhotoClicked(object sender, EventArgs e)
+    private async void OnPickPhotoClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        var files = await MediaPicker.PickPhotosAsync();
+        if (files == null || files.Count == 0)
+            return;
+
+        var file = files[0];
+
+        var imagesPath = Path.Combine(FileSystem.AppDataDirectory, "images");
+
+        if (!Directory.Exists(imagesPath))
+            Directory.CreateDirectory(imagesPath);
+
+        var newFileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+        var newFilePath = Path.Combine(imagesPath, newFileName);
+
+        using var sourceStream = await file.OpenReadAsync();
+        using var localFileStream = File.OpenWrite(newFilePath);
+
+        await sourceStream.CopyToAsync(localFileStream);
+
+        _imagePath = newFilePath;
+
+        Result.Text = $"Photo selected: {_imagePath}";
     }
 }
