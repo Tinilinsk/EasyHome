@@ -125,7 +125,7 @@
                 <Grid Grid.Row="1" VerticalOptions="End" BackgroundColor="#15171B" HeightRequest="70" ColumnDefinitions="*, *, *, *">
                     <Button Grid.Column="0" Text="🏠&#10;Home" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70"/>
                     <Button Grid.Column="1" Text="🛒&#10;Cart" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70"/>
-                    <Button Grid.Column="2" Text="📄&#10;Orders" TextColor="White" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70"/>
+                    <Button Grid.Column="2" Text="📄&#10;Orders" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70"/>
                     <Button Grid.Column="3" Text="👤&#10;Profile" TextColor="Gray" FontSize="12" BackgroundColor="Transparent" BorderColor="Transparent" LineBreakMode="WordWrap" Padding="0" HeightRequest="70"/>
                 </Grid>
             </Grid>
